@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Ican & Iara</title>
+
+    <style>
+        .story-card{
+    background:#f7eddc;
+    padding:25px;
+    margin:20px auto;
+    max-width:600px;
+    border-radius:15px;
+    cursor:pointer;
+}
+
+.popup{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.7);
+    justify-content:center;
+    align-items:center;
+}
+
+.popup-content{
+    background:white;
+    width:80%;
+    max-width:700px;
+    padding:30px;
+    border-radius:20px;
+    position:relative;
+}
+
+.close{
+    position:absolute;
+    right:20px;
+    top:10px;
+    font-size:30px;
+    cursor:pointer;
+}
+        .story-section{
+    padding:100px 10%;
+    text-align:center;
+}
+
+.title{
+    color:#6d4c41;
+    margin-bottom:40px;
+}
+
+.story-card{
+    max-width:700px;
+    margin:auto;
+    background:#f7eddc;
+    padding:30px;
+    border-radius:20px;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
+.story-card:hover{
+    transform:translateY(-8px);
+}
+
+.popup{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+    z-index:9999;
+    justify-content:center;
+    align-items:center;
+}
+
+.popup-content{
+    width:80%;
+    max-width:800px;
+    background:white;
+    padding:40px;
+    border-radius:25px;
+    position:relative;
+    animation:floatUp 0.4s ease;
+    max-height:80vh;
+    overflow-y:auto;
+}
+
+.popup-content h2{
+    color:#6d4c41;
+    margin-bottom:20px;
+}
+
+.popup-content p{
+    line-height:1.9;
+    color:#555;
+}
+
+.close{
+    position:absolute;
+    top:15px;
+    right:25px;
+    font-size:35px;
+    cursor:pointer;
+}
+
+@keyframes floatUp{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+        /* STORY SECTION */
+.story-section{
+    background:#fff;
+    padding:80px 10%;
+}
+
+.story-container{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
+}
+
+.story-container h1{
+    font-size:3rem;
+    color:#6d4c41;
+    margin-bottom:15px;
+}
+
+.story-line{
+    width:80px;
+    height:3px;
+    background:#c9a27b;
+    margin:0 auto 50px;
+}
+
+.story-card{
+    background:#f7eddc;
+    padding:35px;
+    border-radius:20px;
+    margin-bottom:25px;
+    text-align:left;
+    transition:0.3s;
+}
+
+.story-card:hover{
+    transform:translateY(-5px);
+}
+
+.story-card .year{
+    font-size:0.9rem;
+    color:#8d6e63;
+    font-weight:600;
+}
+
+.story-card h2{
+    margin:10px 0;
+    color:#5d4037;
+}
+
+.story-card p{
+    color:#555;
+    line-height:1.8;
+}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f8f8f8;
+            padding-top: 90px; /* Supaya konten tidak tertutup navbar yang fixed */
+        }
+
+        /* HEADER & NAVBAR */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 8%;
+            z-index: 999;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #f7eddc;
+        }
+
+        /* CONTENT */
+        .content {
+            background: white;
+            padding: 60px 10%;
+            min-height: 80vh;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 50px;
+            color: #7a5c45;
+            text-transform: capitalize;
+        }
+
+        .couple-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .bio-card {
+            background: #f7eddc;
+            width: 420px;
+            padding: 30px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .bio-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .bio-card img {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+            margin-bottom: 20px;
+        }
+
+        .bio-card h3 {
+            font-size: 2rem;
+            color: #6d4c41;
+            margin-bottom: 15px;
+        }
+
+        .bio-card p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .bio-card ul {
+            list-style: none;
+        }
+
+        .bio-card ul li {
+            padding: 8px;
+            color: #444;
+            font-size: 1rem;
+        }
+
+        /* LOVE BOX (ABOUT WEB) */
+        .love-box {
+            background: #111;
+            color: white;
+            max-width: 900px;
+            margin: 60px auto 0 auto;
+            padding: 40px;
+            border-radius: 25px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .love-box h2 {
+            color: #ff6b9d;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .love-box p {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #ccc;
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 30px;
+            animation: float 3s infinite ease-in-out;
+        }
+
+        .heart1 { top: 15px; left: 20px; }
+        .heart2 { top: 15px; right: 20px; }
+        .heart3 { bottom: 15px; left: 20px; }
+        .heart4 { bottom: 15px; right: 20px; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #000;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-love {
+            font-size: 1.2rem;
+        }
+
+        @media(max-width:768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+            }
+            .nav-links {
+                gap: 15px;
+            }
+            body {
+                padding-top: 130px;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .bio-card {
+                width: 100%;
+            }
+            .footer-love {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+   <header class="navbar">
+        <div class="logo">🐯🐺 Ican & Iara</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+<section class="story-section">
+
+    <h1 class="title">About us</h1>
+
+   
+
+</section>
+
+<!-- POPUP -->
+<div class="story-card" onclick="openStory('popup1')">
+    <h2>Awal Pertemuan</h2>
+    <p></p>coba pencet
+</div>
+
+<div class="story-card" onclick="openStory('popup2')">
+    <h2>Perjalanan</h2>
+    <p>coba pencet</p>
+</div>
+
+<div class="story-card" onclick="openStory('popup3')">
+    <h2>Hari Ini</h2>
+    <p>coba pencet</p>
+</div>
+
+<!-- POPUP 1 -->
+<div class="popup" id="popup1">
+    <div class="popup-content">
+        <span class="close" onclick="closeStory('popup1')">&times;</span>
+        <h2>Awal Pertemuan</h2>
+        <p> <br>Pas Sore  aku baru aja ngerjain lomba BP tapi tiba2 pino malah ngambil laptop nya terus ngechat kamu pake akun aku, sebenernya aku kesel bgt pas itu
+        tapi mau gimana lagi aku ga bisa ngapa2in udah terlanjur jga terus kamu juga udah liat akhirnya yang bisa aku lakuin cuman hapus chat dari pino terus chat kamu
+        di hari itu aku gatau antara seneng atau kesel tapi yang penting aku udah bisa chatan sama kamu hehe.</br>
+        <br>abis itu aku mulai deh chat2an sama, awalnya nih aku kira kamu ga suka ngeledek orang eh ternyata kamu sama aja kayak aku suka menghina dan menggibah
+        jadi ya aku kayak asik juga jadinya hehe, padahal aku ngiranya kamu tuh gabakal sefrekuensi sama aku soalnya kamu tuh kek cewe bgt gaada unisex2mya, tapi ternyata
+        kita malah bisa sefrekuensi dan sedeket ini, jujur awalnya aku bingung bgt nyari topik tapi untung kamu juga suka nyari jadinya ga aku sendiri hehe,, jjadi ya disitu aku 
+        ngerasa nyaman aja sih kalo chatan sama kamu pokoknya kalo dah chatan jadi lega rasanya.</br>
+        <br> nah pas kita udah di rumah aku tuh awalnya ya pengen bgt main ml makanya aku sering nyuruh kamu tidur hehe, meski waktu itu aku ga jujur sih sama kamu maap yaaa, tapi sekarang
+        aku malah pengenya sama amu terus ml nya sudah terlupakan hehe udah jadi no dua dia, nah abis tu sebenrnya pas awal aku nyadar ternyata aku lebih butuh kamu dari yang lain tuh pas kamu ke jakarta
+        soalnya disitu kan kamu ngilang seminggu dan kamu ngechat aku juga bentar banget nah disitu aku gatau kenapa dada aku sesek bgt aku bener2 nyariin kamu aku mau chat tapi aku gaenak sama kamu soalnya lagi seneng2 juga kan kamunya
+        abis tuh kalo kamu nyadar disitu aku jadi jarang main ml, ya karena aku udh bener2 sadar kalo kamu tuh segalanya buat aku ihh kata2 yang ini kek buaya bat ya padahal kan aku auuuuu wkkwkwk</br></p>
+    </div>
+</div>
+
+<!-- POPUP 2 -->
+<div class="popup" id="popup2">
+    <div class="popup-content">
+        <span class="close" onclick="closeStory('popup2')">&times;</span>
+        <h2>Perjalanan</h2>
+        <p>Cerita lengkap kedua...</p>
+    </div>
+</div>
+
+<!-- POPUP 3 -->
+<div class="popup" id="popup3">
+    <div class="popup-content">
+        <span class="close" onclick="closeStory('popup3')">&times;</span>
+        <h2>Hari Ini</h2>
+        <p>Cerita lengkap ketiga...</p>
+    </div>
+</div>
+    
+        <script>
+function openStory(id){
+    document.getElementById(id).style.display = "flex";
+}
+
+function closeStory(id){
+    document.getElementById(id).style.display = "none";
+}
+</script>
+</script>      
+
+</body>
+</html>

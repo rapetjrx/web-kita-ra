@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web kita Ra</title>
+
+    <style>
+        
+     .footer{
+    background:#000;
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+    margin-top:80px;
+    position:relative;
+    overflow:hidden;
+}
+
+.footer-animal{
+    position:absolute;
+    left:20px;
+    bottom:20px;
+    display:flex;
+    align-items:flex-end;
+}
+
+.footer-animal img{
+    width:100px;
+    position:relative;
+    z-index:2;
+}
+
+.footer-animal-text{
+    position:absolute;
+    left:40px;
+    bottom:10px;
+    font-size:4rem;
+    font-weight:bold;
+    color:rgba(255,255,255,0.08);
+    white-space:nowrap;
+    z-index:1;
+}
+
+
+
+.footer h3{
+    color:#ff6b9d;
+    margin-bottom:15px;
+    font-size:1.8rem;
+}
+
+.footer p{
+    color:#ccc;
+    line-height:1.8;
+    margin-bottom:10px;
+}
+
+.footer-love{
+    font-size:1.5rem;
+    margin-top:15px;
+}
+        .love-box{
+    background:#111;
+    color:white;
+    max-width:900px;
+    margin:60px auto;
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
+    position:relative;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+.love-box h2{
+    color:#ff6b9d;
+    margin-bottom:20px;
+    font-size:2rem;
+}
+
+.love-box p{
+    line-height:1.8;
+    font-size:1.1rem;
+}
+
+.heart{
+    position:absolute;
+    font-size:30px;
+    animation:float 3s infinite ease-in-out;
+}
+
+.heart1{
+    top:15px;
+    left:20px;
+}
+
+.heart2{
+    top:15px;
+    right:20px;
+}
+
+.heart3{
+    bottom:15px;
+    left:20px;
+}
+
+.heart4{
+    bottom:15px;
+    right:20px;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body{
+            background:#f8f8f8;
+        }
+
+        /* HERO SLIDESHOW */
+        .hero{
+            width:100%;
+            height:100vh;
+            position:relative;
+            overflow:hidden;
+        }
+
+        .slide{
+            position:absolute;
+            width:100%;
+            height:100%;
+            background-size:cover;
+            background-position:center;
+            opacity:0;
+            animation:slideShow 15s infinite;
+        }
+
+        .slide:nth-child(1){
+            background-image:url('https://instagram.fcgk24-1.fna.fbcdn.net/v/t1.15752-9/716609947_4350000425258942_9188161129659324089_n.jpg?stp=dst-jpg_s552x414_tt6&_nc_cat=108&ccb=7-5&_nc_sid=0024fc&_nc_ohc=eYOegEeOB_wQ7kNvwFH_klq&_nc_oc=Adq5TTtJug0KjNMot8tU8TAyvtmwuu2uckw7AH1HMypJRpaUVIFEBM7b-K-HwEI8U1s&_nc_zt=23&_nc_ht=instagram.fcgk24-1.fna&_nc_ss=7b6a8&oh=03_Q7cD5gFWiZdt-8BZdqj1nEtFD9yhtodkqb3b2NjTqhqXWpkByw&oe=6A4A443E');
+            animation-delay:0s;
+        }
+
+        .slide:nth-child(2){
+            background-image:url('https://instagram.fcgk24-1.fna.fbcdn.net/v/t1.15752-9/712503162_2004727793469761_1428457651956370007_n.jpg?stp=dst-jpg_s843x403_tt6&_nc_cat=101&ccb=7-5&_nc_sid=0024fc&_nc_ohc=0NGe2lYZZWQQ7kNvwHOaSLs&_nc_oc=AdoXUkV9LRLKA97GDm2X2C2R-oqNz4wdl4Ars9UzceU3IEWon8Uui3yljtY-q8KEy4E&_nc_zt=23&_nc_ht=instagram.fcgk24-1.fna&_nc_ss=7b6a8&oh=03_Q7cD5gGDa8scvzsfJIj-XX2-A2fUvc2k09vqWI6og3j1E0rugA&oe=6A4A34FF');
+            animation-delay:5s;
+        }
+
+        .slide:nth-child(3){
+            background-image:url('https://instagram.fcgk24-2.fna.fbcdn.net/v/t1.15752-9/710708060_1544716730514699_3104947023846297501_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=104&ccb=7-5&_nc_sid=0024fc&_nc_ohc=UK-tamcLpuMQ7kNvwE6Gccs&_nc_oc=AdpSSjsZQc3VciF-ry05Me3LSGDmKfHJAdqlRuJ2KblzyNESBrMRdTRYAVLjR_fxdQg&_nc_zt=23&_nc_ht=instagram.fcgk24-2.fna&_nc_ss=7b6a8&oh=03_Q7cD5gF6_arPvzr_8u8LQoJsnU42rSzTT44YjmqFsTHbCuoDHA&oe=6A4A5931');
+            animation-delay:10s;
+        }
+        .slide:nth-child(4){
+            background-image:url('https://instagram.fcgk24-1.fna.fbcdn.net/v/t1.15752-9/711530891_944190518587271_7893079372703783705_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=102&ccb=7-5&_nc_sid=0024fc&_nc_ohc=B7KZu4Tlww0Q7kNvwEK0nAq&_nc_oc=AdqGidgGY8rgvPgTJzMtt5KY0VR5MN4TJEq1X4ti4sDJNgEhKHGgdXnfo5HwsxCwTRE&_nc_zt=23&_nc_ht=instagram.fcgk24-1.fna&_nc_ss=7b6a8&oh=03_Q7cD5gFm8UUJX0j_uawdIi0lXWaJNeO7M5aTMPhUQX470qNKww&oe=6A4A3578');
+            animation: delay 10s;
+        }
+
+        @keyframes slideShow{
+            0%{
+                opacity:0;
+            }
+            10%{
+                opacity:1;
+            }
+            30%{
+                opacity:1;
+            }
+            40%{
+                opacity:0;
+            }
+            100%{
+                opacity:0;
+            }
+        }
+
+        .overlay{
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background:rgba(0,0,0,0.45);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            color:white;
+            z-index:2;
+        }
+
+        .overlay h1{
+            font-size:4rem;
+            margin-bottom:10px;
+        }
+
+        .overlay p{
+            font-size:1.3rem;
+        }
+
+        /* SECTION KOSONG */
+        .content{
+            min-height:800px;
+            background:white;
+            padding:80px 10%;
+        }
+
+        .placeholder{
+            border:3px dashed #d4d4d4;
+            height:500px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            color:#999;
+            font-size:1.5rem;
+            border-radius:15px;
+        }
+
+        @media(max-width:768px){
+            .overlay h1{
+                font-size:2.5rem;
+            }
+
+            .overlay p{
+                font-size:1rem;
+            }
+        }
+
+         .section-title{
+    text-align:center;
+    font-size:3rem;
+    margin-bottom:50px;
+    color:#7a5c45;
+}
+
+.couple-container{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.bio-card{
+    background:#f7eddc;
+    width:420px;
+    padding:30px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.bio-card:hover{
+    transform:translateY(-10px);
+}
+
+.bio-card img{
+    width:150px;
+    height:150px;
+    object-fit:contain;
+    margin-bottom:20px;
+}
+
+.bio-card h3{
+    font-size:2rem;
+    color:#6d4c41;
+    margin-bottom:15px;
+}
+
+.bio-card p{
+    color:#555;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.bio-card ul{
+    list-style:none;
+}
+
+.bio-card ul li{
+    padding:8px;
+    color:#444;
+    font-size:1rem;
+}
+
+@media(max-width:768px){
+
+    .section-title{
+        font-size:2rem;
+    }
+
+    .bio-card{
+        width:100%;
+    }
+      .bio-panda{
+    position:absolute;
+    width:250px;
+    right:-70px;
+    bottom:-40px;
+    opacity:0.2;
+    z-index:1;
+}
+
+}
+/* HEADER */
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    z-index:999;
+    box-shadow:0 2px 10px rgba(0,0,0,0.3);
+}
+
+.logo{
+    color:white;
+    font-size:1.5rem;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-size:1rem;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#f7eddc;
+}
+
+/* supaya hero tidak tertutup header */
+.hero{
+    margin-top:70px;
+}
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+        padding:15px;
+    }
+
+    .nav-links{
+        gap:15px;
+    }
+
+    .hero{
+        margin-top:110px;
+    }
+}
+.gallery-mini{
+    margin-top:60px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.gallery-mini img{
+    width:250px;
+    height:300px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+.gallery-mini img:hover{
+    transform:scale(1.05);
+
+   
+
+
+
+    </style>
+   
+   <header class="navbar">
+    <div class="logo">🐯🐺 Ican & Iara</div>
+
+    <nav>
+<ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+</ul>
+    </nav>
+</header>
+
+    <!-- HERO SLIDESHOW -->
+    <section class="hero">
+
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+       
+       
+
+        <div class="overlay">
+            <div>
+                <h1>Ican &amp; Iara</h1>
+                <p>Semua Tentang kita</p>
+            </div>
+        </div>
+
+    </section>
+
+  <!-- BIODATA PASANGAN -->
+<section class="content">
+
+    <h2 class="section-title">about us</h2>
+
+    <div class="couple-container">
+
+        <!-- KOTAK KIRI -->
+        <div class="bio-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/616/616554.png" alt="Macan">
+
+            <h3>🐯 Iara</h3>
+
+            <p>
+                Halo, aku Iara.
+                Aku suka bermain jalan jalan, mendengarkan musik,
+                dan tentunya menghabiskan waktu bersama Ican.
+            </p>
+
+            <ul>
+                <li>🎂 12 november</li>
+                <li>🌸 Hobi: traveling</li>
+                <li>🎵 Suka Musik</li>
+                <li>❤️ Sayang Ican</li>
+            </ul>
+        </div>
+
+        <!-- KOTAK KANAN -->
+        <div class="bio-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/616/616430.png" alt="Serigala Imut">
+
+            <h3>🐺 Ican</h3>
+
+            <p>
+                Halo, aku Ican.
+                Aku suka sekali bermain game sampai sampai iara menyebut game adalah pacar ku,,
+                dan aku suka sekali dengan iara.
+
+            <ul>
+                <li>🎂 4 Juni</li>
+                <li>🎮 Hobi: main game</li>
+                <li>🌸 Suka hal  random</li>
+                <li>❤️ Sayang Iara</li>
+
+                
+            </ul>
+        </div>
+        <div class="love-box">
+    <span class="heart heart1">❤️</span>
+    <span class="heart heart2">💕</span>
+    <span class="heart heart3">💖</span>
+    <span class="heart heart4">💘</span>
+
+    <h2>About web</h2>
+
+    <p>
+       hallo aku buat wab ini spesial buat hari ulang tahun kamu yang ke 18, semoga kamu bahagia terus ya ,panjang umur, menjadi pribadi yang lebih baik, dan semakin sayang sama aku hehe.
+       selain itu web ini juga dibuat untuk menyimpan semua poto poto kita, yaaa awalnya aku pikir dari ig udah bisa nympen tapi ngga deh aku bikinin web aja hehe semoga aja kamu suka wkkwkw.
+    </p>
+</div>
+
+
+
+
+
+</section>
+    <footer class="footer">
+
+
+
+   
+    <div class="footer-love">
+   IARA -------------------------------------------------------------  🐯 ❤️ 🐺 ------------------------------------------------------------ ICAN
+    </div>
+
+</footer>
+
+</body>
+</html>
